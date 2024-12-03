@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@theme {
+	--spacing: 0.0625rem;
+	--spacing-none: 0px;
+	--spacing-px: 1px;
+	--spacing-rem: 1rem;
+	--spacing-em: 1em;
+	--spacing-ch: 1ch;
+}
+
+@layer base {
+	* {
+		@apply focus:outline-none focus-visible:outline-current focus-visible:outline-dotted focus-visible:outline-offset-2 selection:bg-black/20 selection:text-white;
+	}
+
+	body {
+		@apply flex flex-col min-h-dvh w-screen max-w-screen overflow-x-clip p-20 relative space-y-20 text-sm;
+	}
+}

@@ -1,11 +1,22 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-	<Welcome />
+	<header class="flex items-top justify-between">
+		<h1>Mister</h1>
+		<p>Shaping products, services and the future of your brand</p>
+		<a href="/information">Information</a>
+	</header>
+	<main class="flex items-center justify-center grow">
+		<div class="aspect-video bg-black w-1/2"></div>
+	</main>
+	<footer class="flex items-bottom justify-between">
+		<a href="#">Credentials</a>
+		<p>
+			184 Websites, 156 Logos, 25 Apps, 48 Brand Identities, 5 Books and 7
+			Totebags
+		</p>
+		<a href="#">hello@mister.studio</a>
+	</footer>
 </Layout>
