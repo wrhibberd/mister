@@ -40,8 +40,6 @@
 
 	* {
 		@apply focus:outline-none focus-visible:outline-current focus-visible:outline-dotted focus-visible:outline-offset-2 selection:bg-black/90 selection:text-white;
-		-webkit-text-stroke-width: 1px;
-		-webkit-text-stroke-color: black;
 	}
 
 	body {
