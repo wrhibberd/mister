@@ -8,7 +8,7 @@ const bodyClasses = "space-y-60";
 ---
 
 <Layout {seoTitle} {seoDescription} {bodyClasses}>
-	<header class="grid grid-cols-12 gap-20 items-top">
+	<header class="grid grid-cols-12 gap-20 items-top *:text-balance">
 		<h1 class="col-span-3">Mister<sup>©</sup></h1>
 		<p class="col-span-6 text-center">
 			Shaping products, services and the future of your brand
@@ -17,37 +17,40 @@ const bodyClasses = "space-y-60";
 			<a href="/about">About</a>
 		</p>
 	</header>
-	<main class="relative flex grow">
+	<main x-data="mediaGallery" class="relative flex grow">
 		<div
-			x-data="mediaGallery"
+			x-ref="container"
 			class="flex -mx-20 overflow-x-scroll min-w-screen no-scrollbar"
 		>
 			<div
 				x-ref="tail"
-				class="fixed pointer-events-none transition-opacity opacity-0 text-lg whitespace-nowrap"
+				class="fixed text-lg transition-opacity opacity-0 pointer-events-none whitespace-nowrap"
 			>
 				->
 			</div>
 			<div class="flex mx-20">
-				<div class="h-full aspect-640/425 flex">
+				<div data-item class="flex h-full aspect-640/425">
 					<div class="w-full h-full bg-amber-300"></div>
 				</div>
-				<div class="h-full aspect-640/425 flex">
+				<div data-item class="flex h-full aspect-640/425">
 					<div class="w-full h-full bg-purple-300"></div>
 				</div>
-				<div class="h-full aspect-640/425 flex">
+				<div data-item class="flex h-full aspect-640/425">
 					<div class="w-full h-full bg-teal-300"></div>
 				</div>
-				<div class="h-full aspect-640/425">
+				<div data-item class="h-full aspect-640/425">
 					<div class="w-full h-full bg-slate-300"></div>
 				</div>
 			</div>
 		</div>
-		<div class="absolute left-20 inset-y-0 flex items-center">
-			<p>01—54</p>
+		<div x-cloak class="absolute inset-y-0 flex items-center left-20">
+			<p>
+				<span x-text="currentItem"></span>—<span x-text="totalItems"
+				></span>
+			</p>
 		</div>
 	</main>
-	<footer class="grid grid-cols-12 gap-20 items-bottom">
+	<footer class="grid grid-cols-12 gap-20 items-end *:text-balance">
 		<p class="col-span-3">
 			<a href="#">Credentials</a>
 		</p>
