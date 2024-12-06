@@ -1,9 +1,15 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const seoTitle = "Mister";
+const seoDescription =
+	"Communication, Design and Strategy. Building brands that matter.";
+const bodyClasses =
+	"bg-black text-white selection:bg-white/90 selection:text-black";
 ---
 
-<Layout>
-	<div class="grid grid-cols-8 gap-40 **:text-balance grow">
+<Layout {seoTitle} {seoDescription} {bodyClasses}>
+	<div class="grid grid-cols-8 gap-y-80 gap-20 **:text-balance grow">
 		<div class="grid col-span-4 grid-cols-subgrid">
 			<h2>Capabilities</h2>
 			<ul class="col-span-2">
@@ -53,9 +59,9 @@ import Layout from "../layouts/Layout.astro";
 			</ul>
 		</div>
 		<div
-			class="col-span-3 col-start-5 row-span-2 row-start-1 *:mb-em last:mb-none"
+			class="*:first-letter:ml-74 col-span-3 col-start-5 row-span-2 row-start-1 *:mb-em last:mb-none"
 		>
-			<p class="first-letter:ml-80">
+			<p>
 				Committed to creating forward-looking identities and experiences
 				for leading brands. Working alongside a wide range of clients,
 				from start-ups to established companies, our aim is to find
@@ -81,21 +87,14 @@ import Layout from "../layouts/Layout.astro";
 				results across the disciplines of print, digital, and
 				experiential systems intended to create tangible business value.
 			</p>
-			<p>
-				Our studio holds itself and our work to a high aesthetic. We aim
-				to treat our time together as an equal and transparent
-				partnership. We'll be interested in your truthful feedback,
-				honest opinions, insights, and genuine collaboration, ensuring a
-				seamless dialogue between ourselves and your team.
-			</p>
 		</div>
 		<div class="col-start-8 row-start-1 text-right">
-			<a href="/">Reel</a>
+			<a href="/">← Return</a>
 		</div>
 		<div class="col-span-3 col-start-5 *:mb-em last:mb-none">
 			<p>
-				Looking to work with us on your next project? We'd love to hear
-				from you.
+				Looking to work with us on your next project?<br />
+				We’d love to hear from you.
 			</p>
 			<a href="#">hello@mister.studio</a>
 		</div>

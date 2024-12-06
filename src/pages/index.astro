@@ -1,22 +1,62 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+const seoTitle = "Mister";
+const seoDescription =
+	"Communication, Design and Strategy. Building brands that matter.";
+const bodyClasses = "space-y-60";
 ---
 
-<Layout>
-	<header class="flex items-top justify-between">
-		<h1>Mister</h1>
-		<p>Shaping products, services and the future of your brand</p>
-		<a href="/information">Information</a>
+<Layout {seoTitle} {seoDescription} {bodyClasses}>
+	<header class="grid grid-cols-12 gap-20 items-top">
+		<h1 class="col-span-3">Mister<sup>©</sup></h1>
+		<p class="col-span-6 text-center">
+			Shaping products, services and the future of your brand
+		</p>
+		<p class="col-span-3 text-right">
+			<a href="/about">About</a>
+		</p>
 	</header>
-	<main class="flex items-center justify-center grow">
-		<div class="aspect-video bg-black w-1/2"></div>
+	<main class="relative flex grow">
+		<div
+			x-data="mediaGallery"
+			class="flex -mx-20 overflow-x-scroll min-w-screen no-scrollbar"
+		>
+			<div
+				x-ref="tail"
+				class="fixed pointer-events-none transition-opacity opacity-0 text-lg whitespace-nowrap"
+			>
+				->
+			</div>
+			<div class="flex mx-20">
+				<div class="h-full aspect-640/425 flex">
+					<div class="w-full h-full bg-amber-300"></div>
+				</div>
+				<div class="h-full aspect-640/425 flex">
+					<div class="w-full h-full bg-purple-300"></div>
+				</div>
+				<div class="h-full aspect-640/425 flex">
+					<div class="w-full h-full bg-teal-300"></div>
+				</div>
+				<div class="h-full aspect-640/425">
+					<div class="w-full h-full bg-slate-300"></div>
+				</div>
+			</div>
+		</div>
+		<div class="absolute left-20 inset-y-0 flex items-center">
+			<p>01—54</p>
+		</div>
 	</main>
-	<footer class="flex items-bottom justify-between">
-		<a href="#">Credentials</a>
-		<p>
+	<footer class="grid grid-cols-12 gap-20 items-bottom">
+		<p class="col-span-3">
+			<a href="#">Credentials</a>
+		</p>
+		<p class="col-span-6 text-center">
 			184 Websites, 156 Logos, 25 Apps, 48 Brand Identities, 5 Books and 7
 			Totebags
 		</p>
-		<a href="#">hello@mister.studio</a>
+		<p class="col-span-3 text-right">
+			<a href="#">hello@mister.studio</a>
+		</p>
 	</footer>
 </Layout>

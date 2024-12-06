@@ -1,20 +1,55 @@
 @import "tailwindcss";
 
 @theme {
+	--font-family-sans: "saans", ui-sans-serif, system-ui, sans-serif,
+		"Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+		"Noto Color Emoji";
+
+	--text-*: initial;
+	--text-sm: 1.3125rem; /* 21px */
+	--text-md: 1.4375rem; /* 23px */
+	--text-lg: 2.5rem; /* 40px */
+
 	--spacing: 0.0625rem;
 	--spacing-none: 0px;
 	--spacing-px: 1px;
 	--spacing-rem: 1rem;
 	--spacing-em: 1em;
 	--spacing-ch: 1ch;
+
+	/* Defaults */
+	--default-transition-duration: 300ms;
+	--default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	--default-font-family: var(--font-family-sans);
 }
 
 @layer base {
+	@font-face {
+		font-family: "saans";
+		font-style: normal;
+		font-weight: normal;
+		font-display: swap;
+		src: url("../assets/fonts/SaansMedium.woff2") format("woff2"),
+			url("../assets/fonts/SaansMedium.woff") format("woff");
+	}
+
 	* {
-		@apply focus:outline-none focus-visible:outline-current focus-visible:outline-dotted focus-visible:outline-offset-2 selection:bg-black/20 selection:text-white;
+		@apply focus:outline-none focus-visible:outline-current focus-visible:outline-dotted focus-visible:outline-offset-2 selection:bg-black/90 selection:text-white;
 	}
 
 	body {
-		@apply flex flex-col min-h-dvh w-screen max-w-screen overflow-x-clip p-20 relative space-y-20 text-sm;
+		@apply flex flex-col min-h-dvh w-screen max-w-screen overflow-x-clip p-20 relative text-sm md:text-md;
+	}
+}
+@layer utilities {
+	/* Hide scrollbar for Chrome, Safari and Opera */
+	.no-scrollbar::-webkit-scrollbar {
+		display: none;
+	}
+
+	/* Hide scrollbar for IE, Edge and Firefox */
+	.no-scrollbar {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
 	}
 }
