@@ -1,0 +1,122 @@
+color: null
+fieldLayouts:
+  86f20c91-0505-484d-9339-1154fc243d85:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-10-02T18:58:04+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: dae4b221-1d7a-4194-8b1c-c92eec62ccbc
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-02T19:06:49+00:00'
+            elementCondition: null
+            fieldUid: 8da1aa94-a75d-432e-a94c-6e3b231a03d4 # Single Line
+            handle: seoTitle
+            includeInCards: false
+            instructions: "This should describe the page accurately, written using natural language. \r\nThe page title is used if this is not filled out. \r\nThis is an important factor for search engine ranking."
+            label: 'SEO Title'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 47ff4743-c255-4015-a1de-5c8895a64359
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-02T19:01:07+00:00'
+            elementCondition: null
+            fieldUid: 74728ce5-d463-4665-b420-88a15565b8b7 # SEO Image
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: caac90d7-3f01-4e38-8c23-0ecdd9ff1a87
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-02T19:01:07+00:00'
+            elementCondition: null
+            fieldUid: 32194650-19e3-4c32-ac66-357b0bea8866 # SEO Overview
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: c840bab0-4bcc-4dd0-b389-d9768d8905b2
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-02T19:01:07+00:00'
+            elementCondition: null
+            type: craft\fieldlayoutelements\HorizontalRule
+            uid: 6bb8a73e-778e-4eb3-b01e-397b7a865434
+            userCondition: null
+          -
+            dateAdded: '2024-10-02T19:01:07+00:00'
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Resave entry to update Social Preview'
+            type: craft\fieldlayoutelements\Tip
+            uid: b6689608-6fd4-426d-9f51-c62389e27b21
+            userCondition: null
+          -
+            dateAdded: '2024-10-02T19:01:07+00:00'
+            elementCondition: null
+            template: _includes/partials/socialPreview
+            type: craft\fieldlayoutelements\Template
+            uid: 3610cd93-6e0c-4815-905b-759750fa0520
+            userCondition: null
+            width: 100
+        name: Content
+        uid: 522f05cc-3edc-4efb-b2da-0c5e3ccb69a6
+        userCondition: null
+handle: seo
+hasTitleField: false
+icon: magnifying-glass
+name: SEO
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: '{owner.title}-SEO'
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

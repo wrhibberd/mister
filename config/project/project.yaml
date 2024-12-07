@@ -1,0 +1,148 @@
+dateModified: 1733528337
+elementSources:
+  craft\elements\Entry:
+    -
+      defaultSort:
+        - postDate
+        - desc
+      disabled: false
+      key: '*'
+      tableAttributes:
+        - status
+        - section
+        - dateCreated
+        - dateUpdated
+        - revisionNotes
+        - link
+      type: native
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:1c88fc1c-9ac4-4b3e-802c-ff1997faeaa3' # Home
+      tableAttributes:
+        - dateUpdated
+        - revisionNotes
+        - link
+      type: native
+    -
+      heading: Globals
+      type: heading
+    -
+      defaultSort:
+        - title
+        - asc
+      disabled: false
+      key: 'single:de64c5dd-83d4-40a1-888f-14cf7cf0a645' # SEO
+      tableAttributes:
+        - dateUpdated
+        - revisionNotes
+      type: native
+email:
+  fromEmail: $SYSTEM_EMAIL
+  fromName: $SITENAME
+  replyToEmail: null
+  template: null
+  transportSettings:
+    apiKey: $MG_API_KEY
+    domain: $MG_DOMAIN
+    endpoint: $MG_ENDPOINT
+  transportType: craft\mailgun\MailgunAdapter
+fs:
+  transforms:
+    hasUrls: true
+    name: Transforms
+    settings:
+      path: '@webroot/transforms'
+    type: craft\fs\Local
+    url: '@web/transforms'
+  uploads:
+    hasUrls: true
+    name: Uploads
+    settings:
+      path: '@webroot/uploads'
+    type: craft\fs\Local
+    url: '@web/uploads'
+graphql:
+  publicToken:
+    enabled: false
+    expiryDate: null
+meta:
+  __names__:
+    0fa1a0c7-0907-418c-9031-71d1bbb8341a: Image # Image
+    1c88fc1c-9ac4-4b3e-802c-ff1997faeaa3: Home # Home
+    01f94fdd-d7fa-4609-be71-5e839dfcbfef: Simple # Simple
+    2a487f24-de08-49b4-bdcb-e495c45a62b7: About # About
+    2b22721e-ecc4-46bb-8a52-d897edc9c96d: Video # Video
+    4a143138-6d82-4d38-8091-12fe1ad20d08: Uploads # Uploads
+    6b1f0e19-e8be-49ff-8719-3c37a1419eeb: 'Lightswitch ON' # Lightswitch ON
+    8da1aa94-a75d-432e-a94c-6e3b231a03d4: 'Single Line' # Single Line
+    9ea1152e-4e7f-4722-a9c9-a6789d802951: $SITENAME # $SITENAME
+    93d15c80-ec25-4512-8c8d-a9c1dee2eaa5: 'SEO Global' # SEO Global
+    298deadf-cec5-45d8-8bf3-9434fe342718: SEO # SEO
+    343aa1ba-6dbd-4601-b6cc-13e6e1a0c105: Image # Image
+    833c15f6-713d-4464-86fe-d449b0170289: Video # Video
+    74728ce5-d463-4665-b420-88a15565b8b7: 'SEO Image' # SEO Image
+    97679f9c-b2ac-461a-a0eb-a22bcb44af77: $SITENAME # $SITENAME
+    32194650-19e3-4c32-ac66-357b0bea8866: 'SEO Overview' # SEO Overview
+    a2c68209-129b-4b4b-afaa-a05a40723e7a: About # About
+    a891e294-099b-4349-9bc3-790753cdadd7: 'Video Type' # Video Type
+    b9d88675-fe1a-47a6-bac2-26d81b5d2176: Media # Media
+    de64c5dd-83d4-40a1-888f-14cf7cf0a645: SEO # SEO
+    f5f8a0ed-3d5f-4a66-8c51-8c0b2b74a956: 'Lightswitch OFF' # Lightswitch OFF
+    f31b8792-03a0-471c-8ee3-520b06e9a471: Home # Home
+    f96dc7d4-ae6b-4c8e-acdb-df57dc343b0d: SEO # SEO
+    fa543a15-862c-41c5-916d-a57035ccc94e: 'Video Url' # Video Url
+plugins:
+  ckeditor:
+    edition: standard
+    enabled: true
+    schemaVersion: 3.0.0.0
+  cp-field-inspect:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  elements-panel:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  expanded-singles:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  google-cloud:
+    edition: standard
+    enabled: true
+    schemaVersion: '2.0'
+  image-resizer:
+    edition: standard
+    enabled: true
+    schemaVersion: 2.0.0
+  mailgun:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+  sherlock:
+    edition: lite
+    enabled: true
+    schemaVersion: 5.1.0
+    settings:
+      maxScans: false
+  vite:
+    edition: standard
+    enabled: true
+    schemaVersion: 1.0.0
+system:
+  edition: solo
+  live: $CRAFT_ONLINE
+  name: $SITENAME
+  retryDuration: null
+  schemaVersion: 5.5.0.0
+  timeZone: $TIMEZONE
+users:
+  allowPublicRegistration: false
+  defaultGroup: null
+  photoSubpath: null
+  photoVolumeUid: null
+  requireEmailVerification: true

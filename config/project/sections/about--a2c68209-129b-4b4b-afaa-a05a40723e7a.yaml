@@ -1,0 +1,27 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 2a487f24-de08-49b4-bdcb-e495c45a62b7 # About
+handle: about
+maxAuthors: 1
+name: About
+previewTargets:
+  -
+    __assoc__:
+      -
+        - label
+        - 'Primary entry page'
+      -
+        - urlFormat
+        - '{url}'
+      -
+        - refresh
+        - '1'
+propagationMethod: all
+siteSettings:
+  9ea1152e-4e7f-4722-a9c9-a6789d802951: # $SITENAME
+    enabledByDefault: true
+    hasUrls: true
+    template: _views/about.twig
+    uriFormat: about
+type: single

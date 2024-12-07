@@ -1,0 +1,209 @@
+color: null
+fieldLayouts:
+  85e10539-6807-452e-b3be-4b3942ebdb48:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-09-09T09:47:59+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: 6dc5cdb7-f814-4464-b9d4-57a884495532
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-09T09:52:07+00:00'
+            elementCondition: null
+            fieldUid: a891e294-099b-4349-9bc3-790753cdadd7 # Video Type
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: aa92ab28-4a76-4422-aa93-a2e8f575f2c7
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-09T09:52:07+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: a891e294-099b-4349-9bc3-790753cdadd7 # Video Type
+                  layoutElementUid: aa92ab28-4a76-4422-aa93-a2e8f575f2c7
+                  operator: in
+                  uid: cb8b97a2-d9ae-4a45-90c0-28a76744d64a
+                  values:
+                    - uploadedVideo
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: 2b22721e-ecc4-46bb-8a52-d897edc9c96d # Video
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: be0d4ac8-c3a6-455c-a897-18fff25424c5
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-09T09:52:07+00:00'
+            elementCondition:
+              class: craft\elements\conditions\entries\EntryCondition
+              conditionRules:
+                -
+                  class: craft\fields\conditions\OptionsFieldConditionRule
+                  fieldUid: a891e294-099b-4349-9bc3-790753cdadd7 # Video Type
+                  layoutElementUid: aa92ab28-4a76-4422-aa93-a2e8f575f2c7
+                  operator: in
+                  uid: 4f34e3af-5086-45d1-9028-2b56901dca95
+                  values:
+                    - embeddedVideo
+              elementType: craft\elements\Entry
+              fieldContext: global
+            fieldUid: fa543a15-862c-41c5-916d-a57035ccc94e # Video Url
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: adfc22d1-e858-4b03-86c0-570162001ef0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-09T09:52:07+00:00'
+            elementCondition: null
+            fieldUid: 0fa1a0c7-0907-418c-9031-71d1bbb8341a # Image
+            handle: posterImage
+            includeInCards: false
+            instructions: "An image to be displayed while the video is downloading or until the user hits the play button. If no image is added the first frame of the video will be displayed.\r\n"
+            label: 'Poster Image'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4452e1c8-c1f1-44ee-9db3-d0c40c4daac3
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: ed6cb805-ce9d-4029-a23a-9cb2cc8917fa
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-09-09T09:52:07+00:00'
+            elementCondition: null
+            fieldUid: f5f8a0ed-3d5f-4a66-8c51-8c0b2b74a956 # Lightswitch OFF
+            handle: loop
+            includeInCards: false
+            instructions: null
+            label: Loop
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 92f927b3-527b-4539-8a76-dfdb610db143
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-09T09:52:07+00:00'
+            elementCondition: null
+            fieldUid: f5f8a0ed-3d5f-4a66-8c51-8c0b2b74a956 # Lightswitch OFF
+            handle: muted
+            includeInCards: false
+            instructions: null
+            label: Muted
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 8bfe7c69-02e8-4a33-803f-9afb8c141365
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-09T09:52:07+00:00'
+            elementCondition: null
+            fieldUid: f5f8a0ed-3d5f-4a66-8c51-8c0b2b74a956 # Lightswitch OFF
+            handle: autoplay
+            includeInCards: false
+            instructions: null
+            label: Autoplay
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 4ed97269-26c3-479b-9eb2-5ba29dd5aeb0
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-09T09:52:07+00:00'
+            elementCondition: null
+            fieldUid: 6b1f0e19-e8be-49ff-8719-3c37a1419eeb # Lightswitch ON
+            handle: controls
+            includeInCards: false
+            instructions: null
+            label: Controls
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 22920aa4-9fc8-469f-80ed-a5042728b498
+            userCondition: null
+            warning: null
+            width: 100
+        name: Settings
+        uid: 7b8e1598-3ea6-4c64-b03a-3e44f336a91a
+        userCondition: null
+handle: video
+hasTitleField: false
+icon: film
+name: Video
+showSlugField: false
+showStatusField: true
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: ''
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

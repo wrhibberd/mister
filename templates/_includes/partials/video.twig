@@ -1,0 +1,66 @@
+{% if craft.app.config.general.devMode %}<!-- Template: {{ _self }} -->{% endif %}
+
+{% set poster = video.posterImage.eagerly().one()|default(null) %}
+{% set videoType = video.videoType.value|default('uploadedVideo') %}
+{% set uploaded = videoType == 'uploadedVideo' %}
+{% set videoUrl = 
+    uploaded ? video.video.eagerly().one().url|default(null) : 
+    video.videoUrl.value|default(null) 
+%}
+{% set youtube = videoType == 'embeddedVideo' and 'youtube' or 'youtu.be' in videoUrl %}
+{% set vimeo = videoType == 'embeddedVideo' and 'vimeo' in videoUrl %}
+
+{% set controls = video.controls %}
+{% set autoplay = video.autoplay %}
+{% set muted = video.muted %}
+{% set loop = video.loop %}
+
+{% if videoUrl %}
+
+    <media-controller 
+        x-ignore
+        ax-load="visible"
+        x-data="video"
+        style="aspect-ratio: 16/9"
+        class="group"
+    >
+
+        {% tag(
+            youtube ? 'youtube-video' :
+            vimeo ? 'vimeo-video' : 'video'
+        ) with {
+            slot: 'media',
+            src: videoUrl,
+            crossorigin: youtube or vimeo ? true : false,
+            playsinline: true,
+            autoplay: autoplay,
+            muted: autoplay ? true : muted,
+            loop: loop,
+        } %}{% endtag %}
+
+        {% if poster %}
+            <media-poster-image
+                slot="poster"
+                src="{{ poster.url }}">
+            </media-poster-image>
+        {% endif %}
+        
+        {# !TODO: Add play button #}
+        {# <media-play-button notooltip slot="centered-chrome">
+            <div slot="icon">
+                {{ svg('@webroot/svgs/play.svg')|attr({class: 'w-64 md:w-96 opacity-75 group-hover:scale-105 group-hover:opacity-100 transition-all'}) }}
+            </div>
+        </media-play-button>  #}
+        
+        {% if controls %}    
+            <media-control-bar>
+                <media-play-button></media-play-button>
+                <media-time-range></media-time-range>
+                <media-time-display showduration></media-time-display>
+                <media-mute-button></media-mute-button>
+                <media-volume-range></media-volume-range>
+            </media-control-bar>
+        {% endif %}
+
+    </media-controller>
+{% endif %}

@@ -1,0 +1,15 @@
+{% if craft.app.config.general.devMode %}<!-- Template: {{ _self }} -->{% endif %}
+
+{% set media = media ?? null %}
+
+{% if media %}
+    {% switch media.type %}
+        {% case "image" %}
+            {% set image = media.image.eagerly().one()|default(null) %}
+            {% include '_includes/partials/picture' %}
+        {% case "video" %}
+            {% include '_includes/partials/video' with {
+                video: media,
+            } %}
+    {% endswitch %}
+{% endif %}

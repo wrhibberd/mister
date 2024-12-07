@@ -1,0 +1,108 @@
+{% embed "_layout.twig" with {
+    bodyClasses: 'bg-black text-white selection:bg-white/90 selection:text-black'
+} %}
+	{% block startBody %}
+		{% if craft.app.config.general.devMode %}<!-- Template: {{ _self }} -->{% endif %}
+	{% endblock %}
+	{% block main %}
+    <div class="grid grid-cols-8 gap-y-80 gap-20 **:text-balance grow">
+		<div class="grid col-span-4 grid-cols-subgrid">
+			<h2>Capabilities</h2>
+			<ul class="col-span-2">
+				<li>Naming</li>
+				<li>Brand Strategy</li>
+				<li>Brand Identity</li>
+				<li>Art Direction</li>
+				<li>Digital Strategy</li>
+				<li>User Interface</li>
+				<li>Ecommerce</li>
+				<li>Digital Design</li>
+				<li>Digital Development</li>
+				<li>Product Design</li>
+			</ul>
+		</div>
+		<div class="grid col-span-4 row-start-2 grid-cols-subgrid">
+			<h2>Selected Clients</h2>
+			<ul class="col-span-2">
+				<li>Dazed + Confused</li>
+				<li>Levi</li>
+				<li>Strauss + Co</li>
+				<li>Chanel</li>
+				<li>Dr. Martens</li>
+				<li>Nike</li>
+				<li>Cutler & Gross</li>
+				<li>Sony</li>
+				<li>Channel 4</li>
+				<li>BP+O</li>
+				<li>Adobe</li>
+				<li>Subway</li>
+				<li>Samsung</li>
+				<li>BBC</li>
+				<li>Perrier-Jouët</li>
+				<li>Panasonic</li>
+				<li>Le Coq Sportif</li>
+			</ul>
+		</div>
+		<div class="grid col-span-4 row-start-3 grid-cols-subgrid">
+			<h2>Live Projects</h2>
+			<ul class="col-span-2">
+				<li>HandsomeFrank</li>
+				<li>Lot61</li>
+				<li>Smörgäsbord</li>
+				<li>Fabrik</li>
+				<li>WA17</li>
+				<li>Flow</li>
+			</ul>
+		</div>
+		<div
+			class="*:first-letter:ml-74 col-span-3 col-start-5 row-span-2 row-start-1 *:mb-em last:mb-none"
+		>
+			<p>
+				Committed to creating forward-looking identities and experiences
+				for leading brands. Working alongside a wide range of clients,
+				from start-ups to established companies, our aim is to find
+				intelligent solutions. Working alongside a wide range of clients
+				from start-ups to established companies, our aim is to find
+				intelligent solutions. To ensure their brand has the impact it
+				deserves, allowing them to take charge of their identity and
+				digital future.
+			</p>
+			<p>
+				We build strong relationships with our clients and provide
+				guidance to shape their products, services and the future of
+				their brands. We help new ideas to emerge and existing products
+				to grow. We help our clients deliver digital, print and brand
+				experiences across all channels, driving revenue, conversion and
+				engagement.
+			</p>
+			<p>
+				We are intentionally small and flexible, scaling up and
+				diversifying our skill set amongst a trusted group of
+				collaborators when required. Our success lies in a creative
+				marriage of brand, design and technology, delivering considered
+				results across the disciplines of print, digital, and
+				experiential systems intended to create tangible business value.
+			</p>
+		</div>
+		<div class="col-start-8 row-start-1 text-right">
+			<a href="/">← Return</a>
+		</div>
+		<div class="col-span-3 col-start-5 *:mb-em last:mb-none">
+			<p>
+				Looking to work with us on your next project?<br />
+				We’d love to hear from you.
+			</p>
+			<a href="#">hello@mister.studio</a>
+		</div>
+		<div class="grid items-end col-span-full grid-cols-subgrid">
+			<p>
+				<a href="#">Credentials</a>
+			</p>
+			<p class="col-start-5">Thank you.</p>
+			<p class="col-span-2 col-start-7 text-right">
+				Design Studio ©2024
+			</p>
+		</div>
+	</div>
+    {% endblock %}
+{% endembed %}

@@ -1,0 +1,16 @@
+columnSuffix: null
+handle: seoOverview
+instructions: "This is the text that is displayed under the search results in Google. \r\nIt should be written in a way to entice the user to click on the link. \r\nIt is not used by search as a ranking factor."
+name: 'SEO Overview'
+searchable: false
+settings:
+  byteLimit: null
+  charLimit: 160
+  code: false
+  initialRows: 2
+  multiline: true
+  placeholder: null
+  uiMode: normal
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\PlainText

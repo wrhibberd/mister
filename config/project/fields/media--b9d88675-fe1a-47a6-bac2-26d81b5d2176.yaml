@@ -1,0 +1,21 @@
+columnSuffix: null
+handle: media
+instructions: null
+name: Media
+searchable: false
+settings:
+  createButtonLabel: Media
+  entryTypes:
+    - 343aa1ba-6dbd-4601-b6cc-13e6e1a0c105 # Image
+    - 833c15f6-713d-4464-86fe-d449b0170289 # Video
+  includeTableView: false
+  maxEntries: null
+  minEntries: null
+  pageSize: 50
+  propagationKeyFormat: null
+  propagationMethod: all
+  showCardsInGrid: false
+  viewMode: cards
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Matrix

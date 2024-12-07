@@ -1,0 +1,9 @@
+{% embed "_layout.twig" %}
+	{% block startBody %}
+		{% if craft.app.config.general.devMode %}<!-- Template: {{ _self }} -->{% endif %}
+	{% endblock %}
+	{% block main %}
+        <h1>404 Page not found</h1>
+        <p>You may have mistyped the address or the page you are looking for might have removed</p>
+	{% endblock %}
+{% endembed %}

@@ -1,0 +1,11 @@
+{
+  "src/js/app.js": {
+    "file": "assets/app.9f1b8918.js",
+    "src": "src/js/app.js",
+    "isEntry": true,
+    "css": [
+      "assets/app.5eb32ec9.css"
+    ],
+    "integrity": "sha384-zKdY+PRU2p1RU4gA+xubrU9jKtJD8TGxCnQwELsw81hWvg2vFut5nYAeMnVvxDHr"
+  }
+}

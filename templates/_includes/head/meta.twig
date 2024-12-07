@@ -1,0 +1,110 @@
+{% if craft.app.config.general.devMode %}<!-- Template: {{ _self }} -->{% endif %}
+
+{% set url = entry.url ?? siteUrl %}
+{% set homepage = entry.uri|default(null) == "__home__" %}
+
+{# Get elements #}
+{% set entry = entry is defined ? entry : null %}
+{% set globalSeoEntry = craft.entries({ section: 'seo', limit: 1 }).eagerly().one() %}
+{% set globalSEO = globalSeoEntry.seo.eagerly().one() %}
+{% set entrySeo = entry.seo.eagerly().one()|default(null) %}
+
+{# Get images #}
+{% set globalImage = globalSEO.seoImage.eagerly().one()|default(null) %}
+{% set entryImage = entrySeo.seoImage.eagerly().one()|default(null) %}
+
+{# Set description and image #}
+{% set description = entrySeo.seoOverview ?? globalSEO.seoOverview ?? null %}
+{% set description = description ? description|striptags|truncate(160) : null %}
+{% set image = entryImage ?? globalImage ?? null %}
+
+{# Make the title #}
+{% set entryTitle = entrySeo.seoTitle ?? entry.title ?? null %}
+{% set title = entryTitle ? siteName ~ ' – ' ~ entryTitle : siteName %}
+
+{# Get social data #}
+{% set twitter = seo.twitterHandle|default(null) %}
+{% set facebookProfileId = seo.facebookProfileId|default(null) %}
+{% set googleSiteVerification = seo.googleSiteVerification|default(null) %}
+{% set facebookSiteVerification = seo.facebookSiteVerification|default(null) %}
+{% set googleAnalyticsGtagId = seo.googleAnalyticsGtagId|default(null) %}
+
+{# display metadata #}
+<title>{{ title }}</title>
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="{{ title }}">
+<meta name="twitter:title" content="{{ title }}">
+<meta property="og:site_name" content="{{ systemName }}">
+<meta property="og:url" content="{{ url }}">
+
+{% if description %}
+	<meta name="description" content="{{ description }}">
+	<meta name="description" content="{{ description }}">
+	<meta property="og:description" content="{{ description }}">
+	<meta name="twitter:description" content="{{ description }}">
+{% endif %}
+
+{% if image %}
+	<meta name="twitter:card" content="summary_large_image">
+	{% set ogImage = {
+		mode: 'fit',
+		width: 1200,
+		height: 630,
+		quality: 75,
+	} %}
+	{% set twitterImage = {
+		mode: 'fit',
+		width: 1200,
+		height: 600,
+		quality: 75,
+	} %}
+	<meta property="og:image" content="{{ image.url(ogImage) }}">
+	<meta property="og:image:width" content="1200">
+	<meta property="og:image:width" content="630">
+	<meta name="twitter:image:src" content="{{ image.url(twitterImage) }}">
+	<meta name="twitter:image:width" content="1200">
+	<meta name="twitter:image:height" content="600">
+{% endif %}
+
+{% if twitter %}
+	<meta name="twitter:site" content="@{{ twitter }}">
+	<meta name="twitter:creator" content="@{{ twitter }}">
+{% endif %}
+
+{% if facebookProfileId %}
+	<meta content="{{ facebookProfileId }}" property="fb:profile_id">
+{% endif %}
+
+{% if googleSiteVerification %}
+	<meta name="google-site-verification" content="{{ googleSiteVerification }}">
+{% endif %}
+
+{% if facebookSiteVerification %}
+	<meta name="facebook-domain-verification" content="{{ facebookSiteVerification }}"/>
+{% endif %}
+
+{# if in production add tracking scripts #}
+{% if env == 'production' %}
+
+    {# Use google analytics if added else use cabin light weight alternative #}
+	{% if googleAnalyticsGtagId %}
+		<script async src="https://www.googletagmanager.com/gtag/js?id={{ googleAnalyticsGtagId }}"></script>
+		<script>
+			window.dataLayer = window.dataLayer || [];
+			function gtag() {
+				dataLayer.push(arguments);
+			}
+			gtag('js', new Date());
+			gtag('config', '{{ googleAnalyticsGtagId }}');
+		</script>
+	{% else %}
+		{# !TODO add cabin script
+			<script async defer src="https://cabin.experiencecicada.com/hello.js"></script> 
+		#}
+	{% endif %}
+	
+{% else %}
+	
+	<meta name="robots" content="noindex" />
+
+{% endif %}

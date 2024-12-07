@@ -1,0 +1,174 @@
+color: null
+fieldLayouts:
+  b71af449-98fd-4b2c-bc6b-666c37e357e3:
+    tabs:
+      -
+        elementCondition: null
+        elements:
+          -
+            autocapitalize: true
+            autocomplete: false
+            autocorrect: true
+            class: null
+            dateAdded: '2024-09-09T09:21:05+00:00'
+            disabled: false
+            elementCondition: null
+            id: null
+            includeInCards: false
+            inputType: null
+            instructions: null
+            label: null
+            max: null
+            min: null
+            name: null
+            orientation: null
+            placeholder: null
+            providesThumbs: false
+            readonly: false
+            requirable: false
+            size: null
+            step: null
+            tip: null
+            title: null
+            type: craft\fieldlayoutelements\entries\EntryTitleField
+            uid: f1bb44f5-4fc4-4cfa-99ab-20d45e56ea76
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-09-09T09:21:05+00:00'
+            dismissible: false
+            elementCondition: null
+            style: tip
+            tip: 'Default values to be used when a page does not have an SEO Image or SEO description added'
+            type: craft\fieldlayoutelements\Tip
+            uid: b8edbb37-c9c8-4d63-9656-d4d71fda044d
+            userCondition: null
+          -
+            dateAdded: '2024-10-02T19:03:03+00:00'
+            elementCondition: null
+            fieldUid: f96dc7d4-ae6b-4c8e-acdb-df57dc343b0d # SEO
+            handle: null
+            includeInCards: false
+            instructions: null
+            label: null
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 9084f431-c38a-4ba7-867b-40b0a57a125a
+            userCondition: null
+            warning: null
+            width: 100
+        name: Content
+        uid: 347c60aa-9a76-43fc-9ad4-a8137e365bda
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-10-02T18:54:30+00:00'
+            elementCondition: null
+            fieldUid: 8da1aa94-a75d-432e-a94c-6e3b231a03d4 # Single Line
+            handle: twitterHandle
+            includeInCards: false
+            instructions: 'Twitter username for the website used in the card footer, without the preceding @. This must be set for Twitter Card tags to be generated.'
+            label: 'Twitter Handle'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 24a5c770-42d5-418e-a7fc-b304698e344f
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-02T18:58:47+00:00'
+            elementCondition: null
+            fieldUid: 8da1aa94-a75d-432e-a94c-6e3b231a03d4 # Single Line
+            handle: facebookProfileId
+            includeInCards: false
+            instructions: 'Your Facebook Profile/Page ID. Click on the ''About'' tab on your Facebook company/fan page, click on ''Page Info'', then scroll to the bottom to find your ''Facebook Page ID'''
+            label: 'Facebook Profile ID'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 5531e79f-438e-45a7-b3bd-862594e5213b
+            userCondition: null
+            warning: null
+            width: 100
+        name: 'Social IDs'
+        uid: 5db722cf-066a-4480-b5d8-4edef633b58e
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-10-02T18:58:47+00:00'
+            elementCondition: null
+            fieldUid: 8da1aa94-a75d-432e-a94c-6e3b231a03d4 # Single Line
+            handle: googleSiteVerification
+            includeInCards: false
+            instructions: 'For the meta google-site-verification tag. Only enter the code in the content='''', not the entire tag.'
+            label: ' Google Site Verification'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 56ad72d9-e5a9-4e06-ad33-a79ec9e9391a
+            userCondition: null
+            warning: null
+            width: 100
+          -
+            dateAdded: '2024-10-02T18:58:47+00:00'
+            elementCondition: null
+            fieldUid: 8da1aa94-a75d-432e-a94c-6e3b231a03d4 # Single Line
+            handle: facebookSiteVerification
+            includeInCards: false
+            instructions: 'For the facebook-domain-verification tag. Only enter the code in the content='''', not the entire tag.'
+            label: 'Facebook Site Verification'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: d4497b31-5656-4caa-b775-d99cfea47ab1
+            userCondition: null
+            warning: null
+            width: 100
+        name: Verification
+        uid: f46206b5-8092-406e-8981-53cbc88de511
+        userCondition: null
+      -
+        elementCondition: null
+        elements:
+          -
+            dateAdded: '2024-10-02T18:58:47+00:00'
+            elementCondition: null
+            fieldUid: 8da1aa94-a75d-432e-a94c-6e3b231a03d4 # Single Line
+            handle: googleAnalyticsGtagId
+            includeInCards: false
+            instructions: null
+            label: 'Google Analytics gtag ID'
+            providesThumbs: false
+            required: false
+            tip: null
+            type: craft\fieldlayoutelements\CustomField
+            uid: 6777e616-cf5a-4de5-95c9-dd7469c9368c
+            userCondition: null
+            warning: null
+            width: 100
+        name: Analytics
+        uid: 0c385dfe-e3d4-4a6f-8a2f-0e820fab8f42
+        userCondition: null
+handle: seoGlobal
+hasTitleField: false
+icon: magnifying-glass
+name: 'SEO Global'
+showSlugField: false
+showStatusField: false
+slugTranslationKeyFormat: null
+slugTranslationMethod: site
+titleFormat: SEO
+titleTranslationKeyFormat: null
+titleTranslationMethod: site

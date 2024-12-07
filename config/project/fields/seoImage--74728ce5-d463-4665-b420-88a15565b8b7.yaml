@@ -1,0 +1,36 @@
+columnSuffix: null
+handle: seoImage
+instructions: 'This image will be used on Twitter, Facebook (and other open graph instances) when linking to this page.'
+name: 'SEO Image'
+searchable: false
+settings:
+  allowSelfRelations: false
+  allowSubfolders: false
+  allowUploads: true
+  allowedKinds:
+    - image
+  branchLimit: null
+  defaultUploadLocationSource: 'volume:4a143138-6d82-4d38-8091-12fe1ad20d08' # Uploads
+  defaultUploadLocationSubpath: '{ section ? section|lower : ''globals'' }/{ section ? slug : ''seo'' }'
+  localizeRelations: false
+  maintainHierarchy: false
+  maxRelations: 1
+  minRelations: null
+  previewMode: full
+  restrictFiles: true
+  restrictLocation: false
+  restrictedDefaultUploadSubpath: null
+  restrictedLocationSource: 'volume:4a143138-6d82-4d38-8091-12fe1ad20d08' # Uploads
+  restrictedLocationSubpath: null
+  selectionLabel: 'Add an image'
+  showCardsInGrid: false
+  showSiteMenu: true
+  showUnpermittedFiles: false
+  showUnpermittedVolumes: false
+  sources: '*'
+  targetSiteId: null
+  validateRelatedElements: false
+  viewMode: large
+translationKeyFormat: null
+translationMethod: site
+type: craft\fields\Assets

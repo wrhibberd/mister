@@ -1,0 +1,35 @@
+{% if craft.app.config.general.devMode %}<!-- Template: {{ _self }} -->{% endif %}
+
+{# data #}
+{% set env = getenv('CRAFT_ENVIRONMENT') %}
+{% set url = craft.app.request.getUrl() %}
+{% set bodyClasses = bodyClasses|default(null) %}
+{% set containerClasses = containerClasses|default(null) %}
+
+<!DOCTYPE html>
+<html 
+    lang="{{ currentSite.language }}" 
+    dir="{{ craft.app.i18n.getLocaleById(currentSite.id).getOrientation() }}"
+>
+	<head>
+		<meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="referrer" content="origin-when-cross-origin" />
+		<link rel="home" href="{{ siteUrl }}"/>
+		{% include "_includes/head/meta.twig" %}
+		{% include "_includes/head/favicon.twig" %}
+        {{ craft.vite.script("src/js/app.js", false) }}
+		{% css with {type: 'text/css'} %}
+			[x-cloak] {
+				display: none;
+			}
+		{% endcss %}
+	</head>
+	<body class="{{ bodyClasses }} w-screen text-sm max-w-screen overflow-x-clip md:text-md">
+		{% block startBody %}{% endblock %}
+		<div class="{{ containerClasses }} relative flex flex-col p-20 grow min-h-dvh">
+        	{% block main %}{% endblock %}
+		</div>
+        {% block endBody %}{% endblock %}
+	</body>
+</html>

@@ -1,0 +1,32 @@
+columnSuffix: null
+handle: videoType
+instructions: null
+name: 'Video Type'
+searchable: false
+settings:
+  options:
+    -
+      __assoc__:
+        -
+          - label
+          - 'Uploaded Video'
+        -
+          - value
+          - uploadedVideo
+        -
+          - default
+          - '1'
+    -
+      __assoc__:
+        -
+          - label
+          - 'Embedded Video'
+        -
+          - value
+          - embeddedVideo
+        -
+          - default
+          - ''
+translationKeyFormat: null
+translationMethod: none
+type: craft\fields\Dropdown

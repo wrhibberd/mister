@@ -1,0 +1,63 @@
+{% if craft.app.config.general.devMode %}<!-- Template: {{ _self }} -->{% endif %}
+
+{% set image = image|default(null) %}
+{% set pictureClasses = pictureClasses|default(null) %}
+{% set imgClasses = classes|default(null) %}
+{% set transforms = transforms|default([640, 768, 1024, 1280, 1536]) %}
+{% set formats = formats|default(['webp', 'jpg']) %}
+{% set alt = alt|default(null) %}
+{% set loadIn = loadIn|default('blur') %}
+
+{% set loadInStates = {
+    none: 'lazyload',
+    blur: 'lazyload blur-up',
+    scale: 'lazyload scale-up'
+} %}
+
+{% if image %}
+
+    {% if image.extension == "svg" %}
+        
+        {{ svg(image)|attr({ class: classes ~ ' fill-current' }) }}
+
+    {% else %}
+
+        {% set lqip = { width: 20, format: 'jpg' } %}
+        {% set lqipImage = image.getUrl(lqip) %}
+
+        <picture class="{{ pictureClasses ? pictureClasses }} overflow-hidden block">
+
+            {% for i in formats %}
+                {% set type = i == 'jpg' ? 'jpeg' : i %}
+                <source {{ attr({
+                    type: 'image/' ~ type,
+                    'data-srcset': image.getSrcset(
+                        transforms,
+                        { format: i, }
+                    ),
+                    'data-sizes': 'auto',
+                }) }}>
+            {% endfor %}
+
+            <img 
+                src="{{ lqipImage }}"
+                class="{{ classes ? classes }} {{ loadInStates[loadIn] }}"
+                alt="{{ alt ? alt : image.title }}"
+                width="{{ image.width }}"
+                height="{{ image.height }}"
+                crossOrigin="anonymous"
+            />
+            <noscript>
+                <img 
+                    src="{{ image.url }}" 
+                    class="{{ classes ? classes }}" 
+                    alt="{{ alt ? alt : image.title }}" 
+                    width="{{ image.width }}"
+                    height="{{ image.height }}"
+                    crossOrigin="anonymous"
+                >
+            </noscript>
+        </picture>
+    {% endif %}
+
+{% endif %}

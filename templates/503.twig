@@ -1,0 +1,9 @@
+{% embed "_layout.twig" %}
+	{% block startBody %}
+		{% if craft.app.config.general.devMode %}<!-- Template: {{ _self }} -->{% endif %}
+	{% endblock %}
+	{% block main %}
+        <h1>Service Unavailable</h1>
+		<p>Our site is temporarily unavailable. Please try again later.</p>
+	{% endblock %}
+{% endembed %}

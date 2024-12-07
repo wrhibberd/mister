@@ -1,0 +1,15 @@
+defaultPlacement: end
+enableVersioning: true
+entryTypes:
+  - 93d15c80-ec25-4512-8c8d-a9c1dee2eaa5 # SEO Global
+handle: seo
+maxAuthors: 1
+name: SEO
+propagationMethod: all
+siteSettings:
+  9ea1152e-4e7f-4722-a9c9-a6789d802951: # $SITENAME
+    enabledByDefault: true
+    hasUrls: false
+    template: null
+    uriFormat: null
+type: single
